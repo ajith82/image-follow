@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+body {
+  background-color: #121212;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  top: 100px;
+  left: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.content h1 {
+  margin-bottom: 5px;
+  font-size: 120px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  color: #ff77f4;
+  cursor: crosshair;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cursor-follow {
+  position: absolute;
+  background: url(/src/images/avengers.jpeg) no-repeat 50% 50%;
+  background-size: cover;
+  width: 300px;
+  mix-blend-mode: difference;
+  height: 400px;
+  z-index: 2;
+  user-select: none;
+  pointer-events: none;
+  transform: translate(5px, 5px);
 }
